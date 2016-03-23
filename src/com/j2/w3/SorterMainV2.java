@@ -27,6 +27,13 @@ public class SorterMainV2 {
         String[] B={"a","b","c","d"};
         Comparator stringComp=new StringComparator();
         Sorter.sort(B,stringComp);
+        
+        String [] Array={"a","b","c","d"};
+        Comparator ReverseComp = new ReverseComparator(stringComp);
+        Sorter.sort(Array,ReverseComp);
+        
+        for (int i=0;i<Array.length;i++)
+          System.out.println("reverse array ["+i+"]=>"+Array[i]);
       
     }
 }
