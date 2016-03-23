@@ -23,6 +23,11 @@ public class SorterMainV2 {
         
         for(int i=0; i<day.length; i++)
             System.out.println("DateArray["+i+"]="+day[i]);
+        
+        String[] B={"a","b","c","d"};
+        Comparator stringComp=new StringComparator();
+        Sorter.sort(B,stringComp);
+      
     }
 }
 
@@ -42,7 +47,7 @@ class Sorter {
     }
 }
 
-// declare my own, also possible to use java.util.Comparator
+
 interface Comparator {
     public int compare(Object o1, Object o2);
     public boolean equals(Object o);
@@ -61,3 +66,23 @@ class DateComparator implements Comparator {
        return ((Date) o1).compareTo((Date) o2); 
      } 
  } 
+
+class StringComparator implements Comparator {
+    public StringComparator() {}
+    public int compare(Object o1, Object o2) {
+        String s1 = (String)o1;
+        String s2 = (String)o2;
+        return s1.compareTo(s2);
+        //return Integer.parseInt((String) o1) -
+        //   Integer.parseInt((String) o2);
+    }
+}
+
+
+class ReverseComparator implements Comparator {
+    private final Comparator c;
+    public ReverseComparator(Comparator c) {this.c = c; }
+    public int compare(Object o1, Object o2) {
+        return c.compare(o2, o1);
+    }
+}
