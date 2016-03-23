@@ -11,15 +11,9 @@ C:\Users\admin\Documents\oej\Code>cd j16
 
 C:\Users\admin\Documents\oej\Code\j16>cd myrepo1
 
-C:\Users\admin\Documents\oej\Code\j16\myrepo1>java -cp classes;lib\aplu5.jar com.sd.turtle.TurtleDemoMain
-
-C:\Users\admin\Documents\oej\Code\j16\myrepo1>java -cp classes;lib\aplu5.jar com.sd.turtle.WeightTurtleMain
-Hello weight turtle
-
-C:\Users\admin\Documents\oej\Code\j16\myrepo1>java -cp classes;lib\aplu5.jar com.j2.w3.SorterMainV2
-WeightTurtleArray[0]=10
-WeightTurtleArray[1]=20
-WeightTurtleArray[2]=30
+C:\Users\admin\Documents\oej\Code\j16\myrepo1>javac -d classes -sourcepath src -cp lib\aplu5.jar src\com\j2\w3\SorterMainV2.java
+Note: src\com\j2\w3\SorterMainV2.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
 
 C:\Users\admin\Documents\oej\Code\j16\myrepo1>java -cp classes;lib\aplu5.jar com.j2.w3.SorterMainV2
 WeightTurtleArray[0]=10
@@ -28,12 +22,9 @@ WeightTurtleArray[2]=30
 DateArray[0]=Fri Apr 10 00:00:00 KST 3896
 DateArray[1]=Thu Jun 25 00:00:00 KST 3896
 
-C:\Users\admin\Documents\oej\Code\j16\myrepo1>java -cp classes;lib\aplu5.jar com.j2.w3.SorterMainV2
-WeightTurtleArray[0]=10
-WeightTurtleArray[1]=20
-WeightTurtleArray[2]=30
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: -1
-        at com.j2.w3.SorterMainV2.main(SorterMainV2.java:25)
+C:\Users\admin\Documents\oej\Code\j16\myrepo1>javac -d classes -sourcepath src -cp lib\aplu5.jar src\com\j2\w3\SorterMainV2.java
+Note: src\com\j2\w3\SorterMainV2.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
 
 C:\Users\admin\Documents\oej\Code\j16\myrepo1>java -cp classes;lib\aplu5.jar com.j2.w3.SorterMainV2
 WeightTurtleArray[0]=10
@@ -41,7 +32,29 @@ WeightTurtleArray[1]=20
 WeightTurtleArray[2]=30
 DateArray[0]=Fri Apr 10 00:00:00 KST 3896
 DateArray[1]=Thu Jun 25 00:00:00 KST 3896
+reverse array [0]=>d
+reverse array [1]=>c
+reverse array [2]=>b
+reverse array [3]=>a
 
-C:\Users\admin\Documents\oej\Code\j16\myrepo1>java -cp classes;lib\aplu5.jar com.j2.w3.SorterMainV2
+C:\Users\admin\Documents\oej\Code\j16\myrepo1>
 
-----실행결과 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
