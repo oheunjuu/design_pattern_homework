@@ -1,0 +1,170 @@
+$ java -jar lib/drjava-stable-20140826-r5761.jar &
+자바실행
+
+저번주 터틀 실행하기
+
+날씨관련 함수 다 실행-과제
+
+class TurtleKeyAdapter extends KeyAdapter{
+  public void keyPressed(KeyEvent e){
+  int keyCode=e.getKeyCode();
+  switch(keyCode){
+    case KeyEvent.VK_UP:
+      forward(20);
+      break;
+  }
+}
+
+
+
+
+
+
+admin@DESKTOP-PKOJ4ES MINGW64 ~
+$ cd Documents/
+
+admin@DESKTOP-PKOJ4ES MINGW64 ~/Documents
+$ cd oej/
+
+admin@DESKTOP-PKOJ4ES MINGW64 ~/Documents/oej
+$ cd Code/
+
+admin@DESKTOP-PKOJ4ES MINGW64 ~/Documents/oej/Code
+$ cd j16/
+
+admin@DESKTOP-PKOJ4ES MINGW64 ~/Documents/oej/Code/j16
+$ cd myrepo1/
+
+admin@DESKTOP-PKOJ4ES MINGW64 ~/Documents/oej/Code/j16/myrepo1 (master)
+$ java -jar lib/drjava-stable-20140826-r5761.jar &
+[1] 3024
+
+admin@DESKTOP-PKOJ4ES MINGW64 ~/Documents/oej/Code/j16/myrepo1 (master)
+$ ^C
+
+admin@DESKTOP-PKOJ4ES MINGW64 ~/Documents/oej/Code/j16/myrepo1 (master)
+$ javac -d classes/ -cp classes/\;lib/aplu5.jar -sourcepath src/ src/com/j2/w4/TurtleKeyObserverMain.java
+src\com\j2\w4\TurtleKeyObserverMain.java:21: error: ';' expected
+          setStatusText("forward 20")
+                                     ^
+src\com\j2\w4\TurtleKeyObserverMain.java:35: error: reached end of file while parsing
+}
+ ^
+2 errors
+
+admin@DESKTOP-PKOJ4ES MINGW64 ~/Documents/oej/Code/j16/myrepo1 (master)
+$ javac -d classes/ -cp classes/\;lib/aplu5.jar -sourcepath src/ src/com/j2/w4/TurtleKeyObserverMain.java
+src\com\j2\w4\TurtleKeyObserverMain.java:21: error: ';' expected
+          setStatusText("forward 20")
+                                     ^
+src\com\j2\w4\TurtleKeyObserverMain.java:35: error: reached end of file while parsing
+}
+ ^
+2 errors
+
+admin@DESKTOP-PKOJ4ES MINGW64 ~/Documents/oej/Code/j16/myrepo1 (master)
+$ javac -d classes/ -cp classes/\;lib/aplu5.jar -sourcepath src/ src/com/j2/w4/TurtleKeyObserverMain.java
+src\com\j2\w4\TurtleKeyObserverMain.java:21: error: ';' expected
+          setStatusText("forward 20")
+                                     ^
+src\com\j2\w4\TurtleKeyObserverMain.java:35: error: reached end of file while parsing
+}
+ ^
+2 errors
+
+admin@DESKTOP-PKOJ4ES MINGW64 ~/Documents/oej/Code/j16/myrepo1 (master)
+$ javac -d classes/ -cp classes/\;lib/aplu5.jar -sourcepath src/ src/com/j2/w4/TurtleKeyObserverMain.java
+src\com\j2\w4\TurtleKeyObserverMain.java:35: error: reached end of file while parsing
+}
+ ^
+1 error
+
+admin@DESKTOP-PKOJ4ES MINGW64 ~/Documents/oej/Code/j16/myrepo1 (master)
+$ javac -d classes/ -cp classes/\;lib/aplu5.jar -sourcepath src/ src/com/j2/w4/TurtleKeyObserverMain.java
+src\com\j2\w4\TurtleKeyObserverMain.java:35: error: reached end of file while parsing
+}
+ ^
+1 error
+
+admin@DESKTOP-PKOJ4ES MINGW64 ~/Documents/oej/Code/j16/myrepo1 (master)
+$ javac -d classes/ -cp classes/\;lib/aplu5.jar -sourcepath src/ src/com/j2/w4/TurtleKeyObserverMain.java
+src\com\j2\w4\TurtleKeyObserverMain.java:35: error: reached end of file while parsing
+}
+ ^
+1 error
+
+admin@DESKTOP-PKOJ4ES MINGW64 ~/Documents/oej/Code/j16/myrepo1 (master)
+$ javac -d classes/ -cp classes/\;lib/aplu5.jar -sourcepath src/ src/com/j2/w4/TurtleKeyObserverMain.java
+src\com\j2\w4\TurtleKeyObserverMain.java:35: error: reached end of file while parsing
+}
+ ^
+1 error
+
+admin@DESKTOP-PKOJ4ES MINGW64 ~/Documents/oej/Code/j16/myrepo1 (master)
+$ javac -d classes/ -cp classes/\;lib/aplu5.jar -sourcepath src/ src/com/j2/w4/TurtleKeyObserverMain.java
+src\com\j2\w4\TurtleKeyObserverMain.java:35: error: reached end of file while parsing
+}
+ ^
+1 error
+
+admin@DESKTOP-PKOJ4ES MINGW64 ~/Documents/oej/Code/j16/myrepo1 (master)
+$ javac -d classes/ -cp classes/\;lib/aplu5.jar -sourcepath src/ src/com/j2/w4/TurtleKeyObserverMain.java
+src\com\j2\w4\TurtleKeyObserverMain.java:34: error: reached end of file while parsing
+  }
+   ^
+src\com\j2\w4\TurtleKeyObserverMain.java:37: error: reached end of file while parsing
+
+    ^
+2 errors
+
+admin@DESKTOP-PKOJ4ES MINGW64 ~/Documents/oej/Code/j16/myrepo1 (master)
+$ javac -d classes/ -cp classes/\;lib/aplu5.jar -sourcepath src/ src/com/j2/w4/TurtleKeyObserverMain.java
+src\com\j2\w4\TurtleKeyObserverMain.java:26: error: cannot find symbol
+          case keyEvent.VK_DOWN:
+               ^
+  symbol: variable keyEvent
+src\com\j2\w4\TurtleKeyObserverMain.java:30: error: cannot find symbol
+          case keyEvent.VK_Q:
+               ^
+  symbol: variable keyEvent
+2 errors
+
+admin@DESKTOP-PKOJ4ES MINGW64 ~/Documents/oej/Code/j16/myrepo1 (master)
+$ javac -d classes/ -cp classes/\;lib/aplu5.jar -sourcepath src/ src/com/j2/w4/TurtleKeyObserverMain.java
+
+admin@DESKTOP-PKOJ4ES MINGW64 ~/Documents/oej/Code/j16/myrepo1 (master)
+admin@DESKTOP-PKOJ4ES MINGW64 ~/Documents/oej/Code/j16/myrepo1 (master)
+$ javac -d classes/ -cp classes/\;lib/aplu5.jar -sourcepath src/ src/com/j2/w4/TurtleKeyObserverMain.java
+src\com\j2\w4\TurtleKeyObserverMain.java:30: error: cannot find symbol
+          case KeyEvent.VK_Left:
+                       ^
+  symbol:   variable VK_Left
+  location: class KeyEvent
+1 error
+
+admin@DESKTOP-PKOJ4ES MINGW64 ~/Documents/oej/Code/j16/myrepo1 (master)
+$ javac -d classes/ -cp classes/\;lib/aplu5.jar -sourcepath src/ src/com/j2/w4/TurtleKeyObserverMain.java
+src\com\j2\w4\TurtleKeyObserverMain.java:30: error: cannot find symbol
+          case KeyEvent.VK_Left:
+                       ^
+  symbol:   variable VK_Left
+  location: class KeyEvent
+1 error
+
+admin@DESKTOP-PKOJ4ES MINGW64 ~/Documents/oej/Code/j16/myrepo1 (master)
+$ javac -d classes/ -cp classes/\;lib/aplu5.jar -sourcepath src/ src/com/j2/w4/TurtleKeyObserverMain.java
+src\com\j2\w4\TurtleKeyObserverMain.java:30: error: cannot find symbol
+          case KeyEvent.VK_Left:
+                       ^
+  symbol:   variable VK_Left
+  location: class KeyEvent
+1 error
+
+admin@DESKTOP-PKOJ4ES MINGW64 ~/Documents/oej/Code/j16/myrepo1 (master)
+$ javac -d classes/ -cp classes/\;lib/aplu5.jar -sourcepath src/ src/com/j2/w4/TurtleKeyObserverMain.java
+
+admin@DESKTOP-PKOJ4ES MINGW64 ~/Documents/oej/Code/j16/myrepo1 (master)
+$ java -cp classes/\;lib/aplu5.jar com.j2.w4.TurtleKeyObserverMain              
+
+
+자바실행하는방법 알아두기
