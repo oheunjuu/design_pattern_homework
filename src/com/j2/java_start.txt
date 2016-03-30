@@ -1,0 +1,15 @@
+자바 실행
+java -cp classes/\;lib/aplu5.jar com.j2.w4.~~
+
+자바씨 실행
+javac -d classes/ -cp classes/\;lib/aplu5.jar -sourcepath src/ src/com/j2/w4/~~.java
+
+닥터자바 트는방법
+java -jar lib/drjava-stable-20140826-r5761.jar &
+
+
+커맨드 창에서 자바씨 자바 실행 방법
+
+javac -d classes -sourcepath src -cp lib\aplu5.jar src\com\sd\turtle\WeightTurtleMain
+
+java -cp classes;lib\aplu5.jar com.sd.turtle.WeightTurtleMain
