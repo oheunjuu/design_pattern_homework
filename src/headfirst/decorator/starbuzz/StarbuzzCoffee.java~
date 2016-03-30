@@ -6,7 +6,7 @@ abstract class Beverage{
   public String getDescription(){
     return description;
   }
-  public abstract double cost(){}
+  public abstract double cost();
 }
 
 class Espresso extends Beverage{
@@ -14,7 +14,7 @@ class Espresso extends Beverage{
     description="Espresso";
   }
   public double cost(){
-    return 1,99;
+    return 1.99;
   }
 }
 
@@ -23,10 +23,10 @@ class DarkRoast extends Beverage {
     description="Dark Roast Coffee";
   }
   public double cost(){
-    return ,99;
+    return 0.99;
   }
 }
-class CondimentDecorator extends Beverage{
+abstract class CondimentDecorator extends Beverage{
   public abstract String getDescription();
 }
 
@@ -61,7 +61,7 @@ public class StarbuzzCoffee {
     Beverage b=new DarkRoast();
    
     Beverage md=new Mocha(b);
-    Beverage wmd=new Whip(m);
+    //Beverage wmd=new Whip(m);//
     Beverage wmd=new Whip(new Mocha(new DarkRoast()));
     System.out.println(wmd.getDescription());
     System.out.println(wmd.cost());

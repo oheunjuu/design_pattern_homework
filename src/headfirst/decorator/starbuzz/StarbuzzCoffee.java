@@ -61,10 +61,11 @@ public class StarbuzzCoffee {
     Beverage b=new DarkRoast();
    
     Beverage md=new Mocha(b);
-    //Beverage wmd=new Whip(m);//
-    Beverage wmd=new Whip(new Mocha(new DarkRoast()));
-    System.out.println(wmd.getDescription());
-    System.out.println(wmd.cost());
+    Beverage wmd=new Whip(md);
+    //Beverage wmd=new Whip((Beverage)md);//
+    //Beverage wmd=new Whip(new Mocha(new DarkRoast()));-->no!!//
+    System.out.print(wmd.getDescription());
+    System.out.println(" "+wmd.cost());
     
   }
 }
