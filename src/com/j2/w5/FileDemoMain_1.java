@@ -28,32 +28,17 @@ public class FileDemoMain_1 {
     try{ 
             
       File myhome=new File(System.getProperty("user.home")); 
-      System.out.println("myhome is "+myhome); 
+      System.out.println("myhome directory is "+myhome); 
  
  
       String cwd=new File( "." ).getCanonicalPath(); 
       System.out.println("current working dir is "+cwd); 
  
  
-      readme=new File(cwd,"HelloWorld.java"); 
+      readme=new File(cwd,"hello.txt"); 
       System.out.println("readme file is "+readme); 
- 
- 
-      isReadme=new FileInputStream(readme); 
-      System.out.println("Characters printed:"); 
-      while((i=isReadme.read())!=-1) { 
-        c=(char)i; 
-        System.out.print(c); 
-      } 
-    }catch(Exception e){ 
-      e.printStackTrace(); 
-    }finally{ 
-      if(isReadme != null) 
-        isReadme.close(); 
-    } 
- 
- 
-    try{ 
+
+
       isReadme=new FileInputStream(readme); 
       isrReadme=new InputStreamReader(isReadme,"UTF8"); 
       brReadme= new BufferedReader(isrReadme); 
