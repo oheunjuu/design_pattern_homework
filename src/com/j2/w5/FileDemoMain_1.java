@@ -35,7 +35,7 @@ public class FileDemoMain_1 {
       System.out.println("current working dir is "+cwd); 
  
  
-      readme=new File(cwd,"Hello.txt"); 
+      readme=new File(cwd,"HelloWorld.java"); 
       System.out.println("readme file is "+readme); 
  
  
