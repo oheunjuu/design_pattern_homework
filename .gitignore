@@ -2,7 +2,7 @@
 lib/
 .png
 *.class
-.java~
+*.java~
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
