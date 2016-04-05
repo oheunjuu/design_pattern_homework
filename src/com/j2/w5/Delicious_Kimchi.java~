@@ -1,0 +1,11 @@
+package com.j2.w5;
+
+public class Delicious_Kimchi{
+  public static void main(String args[]){
+    Kimchi kimchi = new waterkimchi();
+    kimchi=new water(kimchi);
+    kimchi=new baechoo(kimchi);
+    System.out.println(kimchi.getDescription()
+                      +"spicy:"+kimchi.spicy());
+  }
+}

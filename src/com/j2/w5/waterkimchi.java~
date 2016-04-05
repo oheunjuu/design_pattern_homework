@@ -1,0 +1,11 @@
+package com.j2.w5; 
+ 
+ 
+public class waterkimchi extends kimchi{ 
+  public waterkimchi(){ 
+    description = "Water Kimchi"; 
+  } 
+  public double spicy(){ 
+    return 1.0; 
+  } 
+} 
