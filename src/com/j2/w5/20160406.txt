@@ -1,0 +1,55 @@
+Factory 
+
+
+class Client
+class MallardDuck
+class DecoyDuck
+Client -> MallardDuck:new()
+Client -> DecoyDuck:new()
+
+
+
+Class Creator
+Class Product
+
+Class ConcreteProduct
+ConcreteCreator -> ConcreteProduct
+Creator <|-- ConcreteCreator
+Product <|-- ConcreteProduct
+
+
+피자만들기
+
+class PizzaStore {
+  orderPizza() 
+}
+class SimplePizzaFactory{
+  createPizza(type:String):CheesePizza
+}
+class Pizza {
+  prepare()
+  bake()
+  cut()
+  box()
+}
+Pizza <|-- CheesePizzaa 
+Pizza <|-- VeggiPizza
+Pizza <|-- ClamPizza
+Pizza <|-- PepperoniPizza
+PizzaStore -> SimplePizzaFactory
+
+SimplePizzaFactory -> Pizza
+
+
+Client -> SimplePizzaFactory:factory=new()
+Client -> PizzaStore:new(factory)
+Client -> PizzaStore:orderPizza("cheese")
+PizzaStore ->"factory:SimplePizzaFactory":Pizza=createPizza("cheese")
+PizzaStore->Pizza:prepare()
+PizzaStore->Pizza:bake()
+PizzaStore->Pizza:cut()
+PizzaStore->Pizza:box()
+
+
+
+
