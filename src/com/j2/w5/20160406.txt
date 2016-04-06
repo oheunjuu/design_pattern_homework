@@ -1,4 +1,4 @@
-Factory 
+ï»¿Factory 
 
 
 class Client
@@ -18,7 +18,7 @@ Creator <|-- ConcreteCreator
 Product <|-- ConcreteProduct
 
 
-ÇÇÀÚ¸¸µé±â
+í”¼ìžë§Œë“¤ê¸°
 
 class PizzaStore {
   orderPizza() 
