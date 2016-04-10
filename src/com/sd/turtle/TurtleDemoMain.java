@@ -1,6 +1,6 @@
 /*  
-  * @author 
-  * @since 
+  * @author oej
+  * @since 160314
   * a simple turtle demo 
   * taken from http://www.java-online.ch/lego/turtlegrafik.php 
   */ 
