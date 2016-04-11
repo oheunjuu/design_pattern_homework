@@ -1,0 +1,14 @@
+20160411
+
+Pizza <|-- ChicagoStylePizza
+Pizza <|-- NYStylePizza
+ChicagoStylePizza <|-- Chicago\nStyleCheesePizza
+
+PizzaStore <-- NYPizza\nStore
+PizzaStore <-- Chicago\nPizza\nStore
+note left of PizzaStore {
+""" public Pizza orderPizza(String type)
+    Pizza pizza;
+    pizza=createPizza(type)
+"""
+}
