@@ -1,0 +1,39 @@
+class PizzaIngredientFactory
+PizzaIngredientFactory <|-- ChicagoPizza\nIngredientFactory
+PizzaIngredientFactory <|-- NYPizza\nIngredientFactory
+
+interface Cheese
+interface Dough
+
+Cheese <|.. MozzarellaCheese
+Cheese <|.. ReggianoCheese
+Dough <|.. ThickCrustDough
+Dough <|.. ThinCrustDough
+
+
+ChicagoPizza\nIngredientFac ..> Dough
+ChicagoPizza\nIngredientFac ..> Cheese
+NyPizza\nIngredientFac ..> Dough
+NyPizza\nIngredientFac ..> Cheese
+
+abstract class Pizza{
+    dough:Dough
+    cheese:Cheese
+    abstract void prepare()
+    void bake()
+}
+
+class CheesePizza{
+    fac:PizzaIngredientFactory
+    CheesePizza(PizzaIngredientFactory)
+}
+Pizza <|--CheesePizza
+
+abstract class PizzaStore {
+    #abstract Pizza createPizza(String item)
+    +Pizza orderPizza(String type)
+}
+PizzaSotre <|-- ChicagoPizzaStore
+ChicagoPizza
+
+
