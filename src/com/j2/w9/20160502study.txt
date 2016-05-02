@@ -1,0 +1,81 @@
+﻿class Client
+class Light
+Client -> Light:on()
+Client -> Garage:open()
+
+
+
+설계
+class Client
+class Invoker{
+    setCommand()
+}
+
+Interface Command{
+    execute()
+}
+Command <|.. ConcreteCommand
+Client -> ConcreteCommand:new()
+
+Client -> Invoker:setCommand(light)
+
+class Receiver
+
+ConcreteCommand -> Receiver
+
+
+
+Command pattern
+
+class Light{
+    +on():void
+    +off():void
+}
+
+class GarageDoor{
+    +up():void
+    +down():void
+}
+
+interface Command{
+    +execute()
+}
+
+class LightOnCommand{
+    -light:Light
+    +LightOnCommand(Light):void
+    +execute():void
+}
+
+Command <|.. LightOnCommand
+LightOnCommand --> Light
+
+class GarageDoorOpenCommand{
+    -gd:GarageDoor
+    +GarageDoorOpenCommand(GarageDoor)
+    +execute():void
+}
+Command <|.. GarageDoorOpenCommand
+GarageDoorOpenCommand -down->GarageDoor
+
+class SimpleRemoteControl{
+    -slot:Command
+    +setCommand(Command)
+    +buttonPressed()
+}
+SimpleRemoteControl -> Command
+Client -> SimpleRemoteControl:setCommand()
+Client -> SimpleRemoteControl:buttonPressed()
+
+
+
+
+
+Client -> SimpleRemoteControl:remote=new()
+Client -> Light:light=new()
+Client -> LightOnCommand:lightOn=new()
+Client -> SimpleRemoteControl:setCommand()
+Client -> SimpleRemoteControl:buttonWasPressed()
+
+
+
