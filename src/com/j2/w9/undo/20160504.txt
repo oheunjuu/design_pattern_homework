@@ -1,0 +1,80 @@
+﻿undo 방식
+
+
+
+Interface Command{
+    +execute():void
+    +undo():void
+}
+
+class LightOnCommand{
+    -light:Light
+    +undo():void
+}
+
+class Light{
+    level:int
+    +on():void
+    +dim(int):void
+}
+Command <|.. LightOnCommand
+LightOnCommand -> Light
+
+class RemoteControlWithUndo{
+    onCommands:Command[]
+    offCommands:Command[]
+    +setCommand(int,Command,Command):void
+    +onButtonWasPushed(int):void
+}
+
+RemoteControlWithUndo -> Command
+
+
+
+
+
+수정
+
+
+Interface Command{
+    +execute():void
+    +undo():void
+}
+
+class LightOnCommand{
+    -light:Light
+    +undo():void
+}
+
+class Light{
+    level:int
+    +on():void
+    +dim(int):void
+}
+Command <|.. LightOnCommand
+LightOnCommand -> Light
+
+class RemoteControlWithUndo{
+    onCommands:Command[]
+    offCommands:Command[]
+    +setCommand(int,Command,Command):void
+    +onButtonWasPushed(int):void
+}
+
+RemoteControlWithUndo -> Command
+class NoCommand
+class Command <|..NoCommand
+
+Client->Light
+
+
+
+
+과제: light, garage, DVD 구현
+
+Client -> Rcwu:new()
+Client -> Light:light=new()
+Client -> LightOnCommand:lightOn=newlight()
+Client -> Rcwu:setCommand(0,onCommand,offCommand)
+Client -> Rcwu:onButtonWasPushed(0)
+Client -> Rcwu:offButtonWasPushed(0)
