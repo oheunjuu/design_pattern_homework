@@ -1,0 +1,51 @@
+﻿Adapter pattern(전기)  ///  Facade pattern(건물)--정문을 통해 건물 진입,시설이용
+
+Facade pattern
+
+
+interface Duck{
+    +quack():void
+    +fly():void
+}
+
+interface Turkey{
+    +gobble():void
+    +fly():void
+}
+
+Duck <|.. MallardDuck
+Turkey <|.. WildTurkey
+
+Client -up-> MallardDuck:quack()
+Client -up->WildTurkey:gobble()
+
+
+
+TurkeyAdapter ta -->duck을 받아옴
+DuckAdapter da --> turkey를 받아옴
+
+----------------------------------------------------
+
+
+java enumeration -->oracle
+
+java iterator --> oracle
+
+
+
+interface Enumeration{
+    +hasMoreElements():boolean
+    +nextElement():E
+}
+
+interface Iterator{
+    +hasNext():boolean
+    +next():E
+}
+
+IteratorAdaptor .up.|>Enumeration
+IteratorAdaptor->Iterator
+
+
+
+
