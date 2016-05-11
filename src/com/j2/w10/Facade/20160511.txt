@@ -1,0 +1,150 @@
+﻿package "com.j2.w11"{
+class c1
+class c2
+class c3
+class c4
+class c5
+class c6
+
+c1-->c2
+c1-->c6
+c2-->c5
+c1-down->c3
+c3-->c4
+}
+class Client
+Client --> c1
+Client --> c2
+Client -->c6
+
+Client-->Facade
+Facade -->c1
+Facade -->c2
+Facade -->c6
+
+
+class Client
+Client --> c1
+Client --> c2
+Client -->c6
+
+위에거 사용안하고 Facade로 보내서 사용
+
+
+--interaction 사용--
+Welcome to DrJava.  Working directory is C:\Users\admin\Documents\oej\Code\j16\homework\src
+> import java.util.Arrays
+> String[] cities={"seoul","incheon","busan","sejong"}
+> cities
+{ seoul, incheon, busan, sejong }
+> cities.getClass()
+class [Ljava.lang.String;
+> import java.util.List
+> List cityList=Arrays.asList(cities)
+> citiyList.getClass()
+Static Error: Undefined name 'citiyList'
+> cityList.getClass()
+class java.util.Arrays$ArrayList
+> cities.length
+4
+> citiList.size()
+Static Error: Undefined name 'citiList'
+> cityList.size()
+4
+> cityList.set(0,"suwon")
+"seoul"
+> cityList
+[suwon, incheon, busan, sejong]
+> cities
+{ suwon, incheon, busan, sejong }
+> import java.util.ArrayList
+> ArrayList cityArrayList=new ArrayList()
+> cityArrayList.getClass()
+class java.util.ArrayList
+> 
+> cityArrayList.addAll(Arrays.asList(cities))
+true
+> cityArrayList
+[suwon, incheon, busan, sejong]
+> cityArrayList.add("jeju")
+true
+> cityArrayList
+[suwon, incheon, busan, sejong, jeju]
+> 
+
+
+넘나 졸린것~~ 북극곰이야 뭐야~~
+
+
+
+Client -> Amplifier:amp=new()
+Client -> tuner:tuner=new(amp)
+Client -> DvDPlayer:dvd=new(amp)
+Client -> Projector:projector=new(dvd)
+Client -> HTFacade:new(amp,tuner,projector)
+Client -> HTFacade:watchMovie()
+Client -> HTFacade:endMovie()
+
+
+
+
+%%plantuml
+@startuml
+class HomeTheaterFacade {
+    -amp:Amplifier
+    -tuner:Tuner
+    -dvd:DvdPlayer
+    -projector:Projector
+    +HomeTheaterFacade(Amplifier,Tuner,DvdPlayer,Projector)
+    +watchMovie(String):void
+    +endMovie():void
+    +listenToRadio(double):void
+    +endRadio():void
+}
+HomeTheaterFacade --> Amplifier
+HomeTheaterFacade --> Tuner
+HomeTheaterFacade --> DvdPlayer
+HomeTheaterFacade --> Projector
+Amplifier -left-> Tuner
+Amplifier -right-> DvdPlayer
+Tuner --> Amplifier
+DvdPlayer --> Amplifier
+Projector --> DvdPlayer
+class Amplifier {
+    description:String
+    tuner:Tuner
+    dvd:DvdPlayer
+    +on()
+    +off()
+    +setDvd(DvdPlayer)
+    +setTuer(Tuner)
+    +setVolume(int)
+}
+class Tuner {
+    description:String
+    amplifier:Amplifier
+    frequency:double
+    +Tuner(String, Amplifier)
+    +on()
+    +off()
+    +setFrequency(double)
+}
+class DvdPlayer {
+    description:String
+    amplifier:Amplifier
+    movie:String
+    on()
+    off()
+    play(String)
+    stop()
+    eject()
+}
+class Projector {
+    description:String
+    dvdPlayer:DvdPlayer
+    +on()
+    +off()
+    +wideScreenMode()
+}
+@enduml
+
