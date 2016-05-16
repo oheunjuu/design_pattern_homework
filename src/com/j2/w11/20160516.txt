@@ -1,0 +1,91 @@
+﻿Hotdraw framework
+
+
+title "Before"
+
+class Coffee
+class Tea
+Client -right-> Coffee
+Client -down-> Tea
+
+
+
+
+class CaffeineBeverage{
+    prepareRecipe()
+    boilWater()
+    pourInCup()
+}
+
+class Coffee{
+    prepareRecipe()
+    brewCoffeeGrinds()
+    addSugarAndMilk()
+}
+
+class Tea{
+    prepareRecipe()
+    steepTeaBag()
+    addLemon()
+}
+
+CaffeineBeverage <|-- Coffee
+CaffeineBeverage <|-- Tea
+
+
+abstract class AbstractClass{
+    +templateMethod():void
+    +abstract primitiveOperation1():void
+    +final concreteOperation():void
+    +hook():void
+    
+}
+class ConcreteClass
+
+AbstractClass<|--ConcreteClass
+
+
+
+class CaffeineBeverage{
+    +final prepareRecipe():void
+    +abstract brew():void
+    +abstract addCondiments():void
+    +boilWater():void
+    +pourInCup():void
+}
+class Coffee{
+    +brew():void
+    +addCondiments():void
+}
+class Tea{
+    +brew():void
+    +addCondiments():void
+}
+CaffeineBeverage<|--Coffee
+CaffeineBeverage<|--Tea
+
+
+
+class CaffeineBeverageWithHook{
+    +final prepareRecipe():void
+    +abstract brew():void
+    +abstract addCondiments():void
+    +boilWater():void
+    +pourInCup():void
+    +customerWantsCondiments():boolean
+}
+class CoffeeWithHook{
+    +brew():void
+    +addCondiments():void
+    +customerWantsCondiments():boolean
+}
+class TeaWithHook{
+    +brew():void
+    +addCondiments():void
+    +customerWantsCondiments():boolean
+}
+CaffeineBeverageWithHook<|--CoffeeWithHook
+CaffeineBeverageWithHook<|--TeaWithHook
+
+
+
