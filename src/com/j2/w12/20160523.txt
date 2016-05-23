@@ -1,0 +1,43 @@
+interaction
+
+> int[] numbers={2,8,7,5,3,1,4}
+> numbers
+{ 2, 8, 7, 5, 3, 1, 4 }
+> java.util.Arrays.sort(numbers)
+> numbers
+{ 1, 2, 3, 4, 5, 7, 8 }
+> String[] cities={"Seoul","Tokyo","New York","Paris","Sydney"}
+> java.util.Arrays.sort(cities)
+> cities
+{ New York, Paris, Seoul, Sydney, Tokyo }
+> 
+
+class Duck{
+    -weight:float
+}
+
+interface java.lang.Comparable{
+    +compareTo(T):int
+}
+
+java.lang.Comparable <|.. Duck
+
+
+
+Iterator
+
+
+class Array
+class ArrayList
+class DinerMenu
+class PancakeHouseMenu
+class MenuItem{
+    String name
+    String description
+    +MenuItem(String, String d, boolean v, double p)
+
+}
+DinerMenu -> Array:length
+PancakeHouseMenu -> ArrayList
+Client --> DinerMenu:getMenuItems()
+Client --> PancakeHouseMenu:getMenuItems()
