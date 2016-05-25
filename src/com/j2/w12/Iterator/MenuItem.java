@@ -5,10 +5,10 @@ public class MenuItem{
   String description;
   boolean vegetarian;
   double price;
-  public MenuItem(String n, String d, boolean v, double p){
-    this.name=n;
-    this.description=d;
-    this.vegetarian=v;
+  public MenuItem(String name, String description, boolean vegetarian, double price){
+    this.name=name;
+    this.description=description;
+    this.vegetarian=vegetarian;
     this.price=price;
   }
   public  String getName(){
@@ -21,6 +21,6 @@ public class MenuItem{
     return price;
   }
   public String toString(){
-    return (name+" , $"+price+"\n "+description);
+    return (name+" , $"+price+"\n   "+description);
   }
 }

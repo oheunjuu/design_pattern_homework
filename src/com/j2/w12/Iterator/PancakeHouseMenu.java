@@ -25,8 +25,8 @@ public class PancakeHouseMenu implements Menu{
     
   }
   
-  public void addItem(String name, String description, boolean v, double p){
-    MenuItem menuItem=new MenuItem(name,description,v,p);
+  public void addItem(String name, String description, boolean vegetarian, double price){
+    MenuItem menuItem=new MenuItem(name,description,vegetarian,price);
     //if(numberOfItems>=MAX_ITEMS){
      // System.out.println("Error");
     //}else{
