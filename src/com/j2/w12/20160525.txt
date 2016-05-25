@@ -1,0 +1,43 @@
+﻿
+interface Iterator{
+    +hasNext():boolean
+    +next:E
+}
+
+Iterator <|.. DinerIterator
+Iterator <|.. PancakeHouseMenuIterator
+
+Interface Menu{
+    +createIterator():Iterator
+}
+
+Menu <|.. DinerMenu
+Menu <|.. PancakeHouseMenu
+PancakeHouseMenu -left-> PancakeHouseMenuIterator
+DinerMenu -left-> DinerIterator
+
+
+
+package 정리
+
+package iterator{
+Interface Iterator{
+    +hasNext():boolean
+    +next:E
+}
+
+Iterator <|.. DinerIterator
+Iterator <|.. PancakeHouseMenuIterator
+}
+package menu{
+Interface Menu{
+    +createIterator():Iterator
+}
+
+Menu <|.. DinerMenu
+Menu <|.. PancakeHouseMenu
+}
+PancakeHouseMenu -left-> PancakeHouseMenuIterator
+DinerMenu -left-> DinerIterator
+
+

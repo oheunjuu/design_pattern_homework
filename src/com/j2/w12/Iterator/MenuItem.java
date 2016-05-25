@@ -4,7 +4,7 @@ public class MenuItem{
   String name;
   String description;
   boolean vegetarian;
-  boolean price;
+  double price;
   public MenuItem(String n, String d, boolean v, double p){
     this.name=n;
     this.description=d;
@@ -16,5 +16,11 @@ public class MenuItem{
   }
   public String getDescription(){
     return description;
+  }
+  public double getPrice(){
+    return price;
+  }
+  public String toString(){
+    return (name+" , $"+price+"\n "+description);
   }
 }
