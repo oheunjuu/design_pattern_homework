@@ -26,7 +26,7 @@ public class DinerMenu implements Menu{
     if(numberOfItems>=MAX_ITEMS){
       System.out.println("Oops! Menu is full. Can't add item anymore.");
     }else{
-      menuItems[0]=menuItem;
+      menuItems[numberOfItems]=menuItem;
       //menuItems[numberOfItems]=menuItem;
       numberOfItems=numberOfItems+1;
     }

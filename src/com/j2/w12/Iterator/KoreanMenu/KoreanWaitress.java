@@ -1,23 +1,23 @@
-package com.j2.w12.Iterator;
+package com.j2.w12.Iterator.KoreanMenu;
 
-public class Waitress {
-  PancakeHouseMenu pancakeHouseMenu;
-  DinerMenu dinerMenu;
+public class KoreanWaitress {
+  KPancakeHouseMenu pancakeHouseMenu;
+  KDinerMenu dinerMenu;
   
-  public Waitress(PancakeHouseMenu pancakeHouseMenu, DinerMenu dinerMenu) {
+  public KoreanWaitress(KPancakeHouseMenu pancakeHouseMenu, KDinerMenu dinerMenu) {
     this.pancakeHouseMenu = pancakeHouseMenu;
     this.dinerMenu = dinerMenu;
   }
   public void printMenu() {
-    Iterator pancakeIterator = pancakeHouseMenu.createIterator();
+    KIterator pancakeIterator = pancakeHouseMenu.createIterator();
     printMenu(pancakeIterator);
     System.out.println();
-    Iterator dinerIterator = dinerMenu.createIterator();
+    KIterator dinerIterator = dinerMenu.createIterator();
     printMenu(dinerIterator);
   }
-  public static void printMenu(Iterator iterator) {
+  public static void printMenu(KIterator iterator) {
     while (iterator.hasNext()) {
-      MenuItem menuItem = (MenuItem)iterator.next();
+      KMenuItem menuItem = (KMenuItem)iterator.next();
       System.out.print(menuItem.getName()+" " ); 
       System.out.println(menuItem.getPrice()+" ");
       System.out.println(menuItem.getDescription()+" ");
