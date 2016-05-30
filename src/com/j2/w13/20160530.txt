@@ -1,0 +1,82 @@
+﻿객체지향을 할때
+	if문을 최대한 없도록 한다.
+
+
+Sequence diagram
+
+Client -> GumballMachine:new(5)
+Client -> gunballMachine:insertQuarter()
+alt HAS_QUARTER
+else NO_QUARTER
+else SOL_OUT
+else SOLD
+end
+
+
+
+
+
+
+Client -> GumballMachine:new(5)
+Client -> GumballMachine:insertQuarter()
+alt HAS_QUARTER
+GumballMachine -> GumballMachine:you cannot insert a quarter
+else NO_QUARTER
+GumballMachine -> GumballMachine:you inserted a quarter
+
+else SOLD_OUT
+GumballMachine -> GumballMachine:you cannot insert a quarter. Sold out!!
+else SOLD
+GumballMachine -> GumballMachine:Wait
+end
+Client -> GumballMachine:turnCrank()
+alt
+else
+else
+else
+end
+Client -> GumballMachine:ejectQuarter()
+alt
+else
+else
+else
+end
+Client -> GumballMachine:dispense()
+alt
+else
+else
+else
+end
+
+
+
+
+
+interface State{
+    +insertQuarter():void
+    +ejectQuarter():void
+    +turnCrank():void
+    +dispense():void
+}
+class GumballMachine{
+    -state:State
+    +setState(State):void
+    +getState():State
+}
+
+State<|..HasQuarter
+State<|..NoQuarter
+State<|..SoldOut
+State<|..Sold
+SoldOut -up-> GumballMachine
+GumballMachine -left-> State
+
+
+
+
+
+
+
+
+
+
