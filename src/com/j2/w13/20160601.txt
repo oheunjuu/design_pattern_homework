@@ -1,0 +1,16 @@
+﻿client -> GumballMachine:new(5)
+GumballMachine -> SoldOutState:new(m)
+GumballMachine -> NoQuarterState:new(m)
+GumballMachine -> HasQuarterState:new(m)
+GumballMachine -> SoldState:new(m)
+client->GumballMachine:insertQuarter()
+client->GumballMachine:ejectQuarter()
+
+
+
+
+DAO list
+
+http://www.tutorialspoint.com/design_pattern/data_access_object_pattern.htm
+
+이름+전화번호
