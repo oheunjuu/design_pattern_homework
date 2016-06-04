@@ -25,4 +25,7 @@ public class SoldState implements State{
       gumballMachine.setState(gumballMachine.getSoldOutState());
     }
   }
+  public void insertwrongcoin(){
+    System.out.println("error...");
+  }
 }

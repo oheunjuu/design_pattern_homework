@@ -9,6 +9,8 @@ public class GumballMachine{
   State hasQuarterState;
 //  final static int SOLD=3;
   State soldState;
+  State breakDownState;
+  
   
 // int state=SOLD_OUT;
   State state=soldOutState;
@@ -19,6 +21,7 @@ public class GumballMachine{
     noQuarterState=new NoQuarterState(this);
     hasQuarterState=new HasQuarterState(this);
     soldState=new SoldState(this);
+    breakDownState=new BreakDownState(this);
     
     this.count=count;
     if (count>0){
@@ -38,6 +41,9 @@ public class GumballMachine{
   public void dispense(){
     state.dispense();
   }
+  public void insertwrongcoin(){
+    state.insertwrongcoin();
+  }
   public void setState(State state){//set은 return이 없음 get은 매개변수 없고 return 있음
     this.state=state;
   }
@@ -52,6 +58,9 @@ public class GumballMachine{
   }
   public State getHasQuarterState(){
     return hasQuarterState;
+  }
+  public State getBreakDownState(){
+    return breakDownState;
   }
   public int getCount(){
     return count;

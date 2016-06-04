@@ -17,7 +17,10 @@ public class HasQuarterState implements State{
     gumballMachine.setState(gumballMachine.getSoldState());
   }
   public void dispense(){
-    System.out.println("No~");
+    System.out.println("No gumball.");
+  }
+  public void insertwrongcoin(){
+    System.out.println("You cannot insert another quarter.");
   }
 }
   

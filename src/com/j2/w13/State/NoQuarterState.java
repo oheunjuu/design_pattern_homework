@@ -18,5 +18,8 @@ public class NoQuarterState implements State{
   public void dispense(){
     System.out.println("Pay please.");
   }
+  public void insertwrongcoin(){
+    System.out.println("You inserted a wrong quarter.");
+  }
 }
     

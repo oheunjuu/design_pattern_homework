@@ -17,4 +17,7 @@ public class SoldOutState implements State{
   public void dispense(){
     System.out.println("No gumballs dispended.");
   }
+  public void insertwrongcoin(){
+    System.out.println("You cannot insert a quarter. gumball is soldout!");
+  }
 }

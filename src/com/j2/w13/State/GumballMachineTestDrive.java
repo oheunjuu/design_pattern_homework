@@ -7,5 +7,6 @@ public class GumballMachineTestDrive{
     gum.turnCrank();
     gum.ejectQuarter();
     gum.dispense();
+    gum.insertwrongcoin();
   }
 }
